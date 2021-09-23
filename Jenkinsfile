@@ -10,14 +10,16 @@ pipeline {
             steps {
                 script {
                 sh 'terraform init'
-                }    
-            }
+                } 
+            }   
+        }
         stage('terraform plan') {
             steps {
                 script {
                 sh 'terraform plan'
-                }    
-            }
+                } 
+            }   
+        }
         stage('terraform apply') {
             input {
                 message "Do you want to apply for production deployment?"
