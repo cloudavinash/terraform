@@ -19,9 +19,9 @@ pipeline {
                 }    
             }
         stage('terraform apply') {
-        input{
-            message "Do you want to apply for production deployment?"
-        }
+            input {
+                message "Do you want to apply for production deployment?"
+            }
             steps {
                 script {
                 sh 'terraform apply -auto --approve'
