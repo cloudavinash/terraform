@@ -61,6 +61,7 @@ resource "aws_route_table_association" "association-3" {
     subnet_id = var.subnet_public_id[2]
     route_table_id = aws_route_table.routing.id
 }
+/*
 resource "aws_nat_gateway" "project-ngw" {
   connectivity_type = "private"
   subnet_id         = aws_subnet.public-subnet-1.id
@@ -250,7 +251,7 @@ resource "aws_lambda_function" "lambda_1" {
   runtime = "nodejs12.x"
   
 }
-/*
+
 resource "aws_lambda_event_source_mapping" "lambda_sqs" {
   event_source_arn = aws_sqs_queue.project_queue.arn
   function_name    = aws_lambda_function.lambda.arn
