@@ -6,7 +6,7 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = ""    # create a bucket and add the bucket name here.
+    bucket = "jenkins5"    
     key    = "Jenkins-tf/terraform.tfstate"
     region = "us-east-1"   
   }
