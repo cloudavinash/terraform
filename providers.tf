@@ -5,12 +5,9 @@ terraform {
       version = "~> 3.0"
     }
   }
-  backend "s3" {
-    bucket = ""    # create a bucket and add the bucket name here.
-    key    = "Jenkins-tf/terraform.tfstate"
-    region = "us-east-1"   
-  }
 }
 provider "aws" {
-  region = "us-east-1"
+  region     = "us-west-2"
+  access_key = "AKIATKZIA3FTD5QVOGGM"
+  secret_key = "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"
 }
